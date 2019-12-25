@@ -7,6 +7,7 @@ export class GameService {
 
   pile = [];
   hand = [];
+  stacks = [100, 100, 1, 1];
 
   constructor() { }
 

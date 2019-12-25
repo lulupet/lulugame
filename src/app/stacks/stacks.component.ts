@@ -6,5 +6,13 @@ import { GameService } from '../game.service';
   templateUrl: './stacks.component.html',
   styleUrls: ['./stacks.component.scss']
 })
-export class StacksComponent {
+export class StacksComponent implements OnInit{
+
+    stacks: any[];
+  
+    constructor(private gameService: GameService) { }
+  
+    ngOnInit() {
+      this.stacks = this.gameService.stacks;
+    }
 }
