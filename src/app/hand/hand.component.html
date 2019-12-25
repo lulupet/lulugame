@@ -1,1 +1,8 @@
-<p>hand works!</p>
+<div class="list-group">
+    <div class="list-group-item"
+            *ngFor="let card of hand;">
+        <h3 style="background-color:red;" class="list-group-item-heading">
+            {{ card }}
+        </h3>
+      </div>
+</div>

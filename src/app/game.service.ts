@@ -6,15 +6,16 @@ import { Injectable } from '@angular/core';
 export class GameService {
 
   pile = [];
+  hand = [];
 
   constructor() { }
 
   newGame() {
 
     var arr = Array.from({length: (99 - 2)}, (v, k) => k + 2);
-    var i, j, temp;
+    var j, temp;
 
-    for (i = arr.length - 1; i > 0; i--) {
+    for (var i = arr.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
         temp = arr[i];
         arr[i] = arr[j];
@@ -22,5 +23,9 @@ export class GameService {
     }
 
     this.pile = arr;
+
+    for (var i = 0; i < 8; i++) {
+      this.hand.push(this.pile.pop());
+    }
   }
 }
