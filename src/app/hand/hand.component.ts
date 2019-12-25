@@ -16,4 +16,8 @@ export class HandComponent implements OnInit {
     this.hand = this.gameService.hand;
   }
 
+  onDraw() {
+    this.gameService.drawCards(1);
+  }
+
 }

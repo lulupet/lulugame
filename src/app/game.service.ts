@@ -28,4 +28,10 @@ export class GameService {
       this.hand.push(this.pile.pop());
     }
   }
+
+  drawCards(k: number) {
+    for (var i = 0; i < k; i++) {
+      this.hand.push(this.pile.pop());
+    }
+  }
 }
